@@ -1,0 +1,86 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Dropdown Menu */
+
+.dropDownContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropDown1,
+.dropDown2{
+    cursor: pointer;
+    background-color: palevioletred;
+    height: 3rem;
+    margin: 2rem;
+    padding: 1rem 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.dropDown1 a,
+.dropDown2 a{
+    text-decoration: none;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.4rem;
+    margin-top: 0.3rem;
+    margin-right: 1.2rem;
+}
+
+.arrow{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #fff;
+    margin-top: 0.4rem;
+}
