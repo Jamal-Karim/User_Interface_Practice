@@ -81,7 +81,8 @@ body {
     margin-right: 1.2rem;
 }
 
-.text {
+.text1,
+.text2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,12 +101,14 @@ li {
     list-style: none;
 }
 
-.dropDown1 ul li {
+.mealOptions li,
+.sportOptions li {
     padding: 0.6rem;
     border-bottom: 2px solid beige;
 }
 
-.dropDown1 ul {
+.mealOptions,
+.sportOptions {
     position: absolute;
     width: 100%;
     top: 100%;
@@ -115,4 +118,12 @@ li {
     padding: 0;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.mealOptions.show,
+.sportOptions.show {
+    height: 14.13rem; 
 }
