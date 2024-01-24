@@ -46,41 +46,73 @@ h6 {
 }
 
 /* Dropdown Menu */
+body {
+    background-color: aquamarine;
+}
 
-.dropDownContainer{
+.dropDownContainer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .dropDown1,
-.dropDown2{
+.dropDown2 {
+    position: relative;
     cursor: pointer;
     background-color: palevioletred;
     height: 3rem;
     margin: 2rem;
     padding: 1rem 2.3rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
 }
 
 .dropDown1 a,
-.dropDown2 a{
+.dropDown2 a {
     text-decoration: none;
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.4rem;
     margin-top: 0.3rem;
     margin-right: 1.2rem;
 }
 
-.arrow{
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
     width: 0;
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 8px solid #fff;
     margin-top: 0.4rem;
+}
+
+li {
+    list-style: none;
+}
+
+.dropDown1 ul li {
+    padding: 0.6rem;
+    border-bottom: 2px solid beige;
+}
+
+.dropDown1 ul {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: pink;
+    border-bottom-right-radius: 5px;
+    padding: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
