@@ -12,7 +12,6 @@ let menu1Flag = false;
 let menu2Flag = false;
 
 dropDown1.addEventListener('click', () => {
-    console.log('menu clicked');
     if (!menu1Flag) {
         dropDownOptions1.classList.add('show');
         menu1Flag = true;
@@ -35,8 +34,6 @@ dropDown2.addEventListener('click', () => {
 
 dropDownOptions1.querySelectorAll('li').forEach(element => {
     element.addEventListener('click', event => {
-        console.log(event.target.textContent);
-
         dropDown1Text.textContent = event.target.textContent;
         dropDownOptions1.classList.remove('show');
         menu1Flag = false;
@@ -45,8 +42,6 @@ dropDownOptions1.querySelectorAll('li').forEach(element => {
 
 dropDownOptions2.querySelectorAll('li').forEach(element => {
     element.addEventListener('click', event => {
-        console.log(event.target.textContent);
-
         dropDown2Text.textContent = event.target.textContent;
         dropDownOptions2.classList.remove('show');
         menu2Flag = false;
@@ -54,3 +49,15 @@ dropDownOptions2.querySelectorAll('li').forEach(element => {
 });
 
 //Mobile Menu
+const mobileMenuIcon = document.querySelector('.menuIcon');
+const menuTab = document.querySelector('.menu');
+const cancelBtn = document.querySelector('.cancel');
+
+mobileMenuIcon.addEventListener('click', () => {
+    menuTab.classList.add('slideOut');
+    
+});
+
+cancelBtn.addEventListener('click', () => {
+    menuTab.classList.remove('slideOut');
+})

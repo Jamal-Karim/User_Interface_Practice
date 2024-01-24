@@ -148,6 +148,7 @@ body {
 }
 
 .menuIcon{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -224,7 +225,7 @@ svg{
     z-index: 10;
     top: 0;
     left: 0;
-    width: 20vw;
+    /* width: 20vw; */
     height: 90vh;
     background-color:rgb(104, 161, 18);
     border-top-left-radius: 25px;
@@ -234,7 +235,13 @@ svg{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* display: none; */
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+.menu.slideOut{
+    width: 20vw;
 }
 
 .pfp {
@@ -264,6 +271,7 @@ svg{
 }
 
 .cancel{
+    cursor: pointer;
     padding: 1.3rem;
     font-size: 1.5rem;
     margin-left: auto;
