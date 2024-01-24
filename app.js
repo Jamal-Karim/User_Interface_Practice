@@ -1,16 +1,22 @@
 //Dropdown Menu
+
+//Buttons for dropdown
 const dropDown1 = document.querySelector(".text1");
 const dropDown2 = document.querySelector(".text2");
 
+//Texts inside dropdown
 const dropDown1Text = document.querySelector('.meal');
 const dropDown2Text = document.querySelector('.sport');
 
+//List items in each dropdown
 const dropDownOptions1 = document.querySelector('.mealOptions');
 const dropDownOptions2 = document.querySelector('.sportOptions');
 
+//Flags to check status of dropdown
 let menu1Flag = false;
 let menu2Flag = false;
 
+//Check for flag then add or remove list elements
 dropDown1.addEventListener('click', () => {
     if (!menu1Flag) {
         dropDownOptions1.classList.add('show');
@@ -32,6 +38,7 @@ dropDown2.addEventListener('click', () => {
     }
 });
 
+//Once list element clicked, switch it to that and remove dropdown
 dropDownOptions1.querySelectorAll('li').forEach(element => {
     element.addEventListener('click', event => {
         dropDown1Text.textContent = event.target.textContent;
@@ -53,9 +60,9 @@ const mobileMenuIcon = document.querySelector('.menuIcon');
 const menuTab = document.querySelector('.menu');
 const cancelBtn = document.querySelector('.cancel');
 
+//Mobile Menu Switching
 mobileMenuIcon.addEventListener('click', () => {
     menuTab.classList.add('slideOut');
-    
 });
 
 cancelBtn.addEventListener('click', () => {
