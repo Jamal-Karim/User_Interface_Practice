@@ -47,13 +47,18 @@ h6 {
 
 /* Dropdown Menu */
 body {
-    background-color:lightblue;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .dropDownContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .dropDown1,
@@ -121,11 +126,94 @@ body {
 }
 
 .mealOptions li:hover,
-.sportOptions li:hover{
+.sportOptions li:hover {
     background-color: rgb(213, 173, 186);
 }
 
 .mealOptions.show,
 .sportOptions.show {
-    height: 14.13rem; 
+    height: 14.13rem;
+}
+
+/* Mobile Menu */
+
+.mobileMenuContainer{
+    margin-top: 10rem;
+    width: 25vw;
+    height: 90vh;
+    margin-bottom: 5rem;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.menuIcon{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+.line{
+    width: 2rem;
+    height: 0.4rem;
+    background-color: black;
+    margin-bottom: 0.3rem;
+    border-radius: 20px;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+svg{
+    margin-left: auto;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.animal1,
+.animal2{
+    width: 23vw;
+    height: 34vh;
+    background-color: lightgray;
+    margin-bottom: 2.4rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img1{
+    width: 21vw;
+    height: 21vh;
+    background-image: url(images/bird.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-bottom: 0.4rem;
+}
+
+.img2{
+    width: 21vw;
+    height: 21vh;
+    background-image: url(images/frog.jpg);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 5px;
+    margin-bottom: 0.4rem;
+}
+
+.animal1 p,
+.animal2 p{
+    margin-left: 0.9rem;
+    margin-right: 0.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
 }
