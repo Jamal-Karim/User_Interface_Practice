@@ -47,7 +47,7 @@ h6 {
 
 /* Dropdown Menu */
 body {
-    background-color: aquamarine;
+    background-color:lightblue;
 }
 
 .dropDownContainer {
@@ -97,12 +97,9 @@ body {
     margin-top: 0.4rem;
 }
 
-li {
-    list-style: none;
-}
-
 .mealOptions li,
 .sportOptions li {
+    list-style: none;
     padding: 0.6rem;
     border-bottom: 2px solid beige;
 }
@@ -121,6 +118,11 @@ li {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease-in-out;
+}
+
+.mealOptions li:hover,
+.sportOptions li:hover{
+    background-color: rgb(213, 173, 186);
 }
 
 .mealOptions.show,
