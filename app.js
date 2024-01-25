@@ -87,6 +87,8 @@ let count = 0;
 let previouslyClicked = circles[0];
 let imageTimeout;
 
+//Image Slider Timeout Function
+
 function updateImage() {
     if (previouslyClicked) {
         previouslyClicked.classList.remove('active');
@@ -103,6 +105,8 @@ function updateImage() {
 }
 
 setTimeout(updateImage, 5000);
+
+//Clicking Circles at Bottom
 
 circles.forEach((circle, index) => {
     circle.addEventListener('click', event => {
@@ -121,6 +125,7 @@ circles.forEach((circle, index) => {
     })
 })
 
+//Arrow Logic
 
 leftArrow.addEventListener('click', () => {
     if (previouslyClicked) {
