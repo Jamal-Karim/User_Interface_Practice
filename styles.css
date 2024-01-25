@@ -137,7 +137,7 @@ body {
 
 /* Mobile Menu */
 
-.mobileMenuContainer{
+.mobileMenuContainer {
     position: relative;
     margin-top: 10rem;
     width: 25vw;
@@ -147,14 +147,14 @@ body {
     border-radius: 25px;
 }
 
-.menuIcon{
+.menuIcon {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     margin-right: auto;
 }
 
-.line{
+.line {
     width: 2rem;
     height: 0.4rem;
     background-color: black;
@@ -162,17 +162,17 @@ body {
     border-radius: 20px;
 }
 
-.navContainer{
+.navContainer {
     display: flex;
     justify-content: space-around;
     padding: 2rem;
 }
 
-svg{
+.search {
     margin-left: auto;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -180,7 +180,7 @@ svg{
 }
 
 .animal1,
-.animal2{
+.animal2 {
     width: 23vw;
     height: 34vh;
     background-color: lightgray;
@@ -192,7 +192,7 @@ svg{
     justify-content: center;
 }
 
-.img1{
+.img1 {
     width: 21vw;
     height: 21vh;
     background-image: url(images/bird.jpg);
@@ -202,7 +202,7 @@ svg{
     margin-bottom: 0.4rem;
 }
 
-.img2{
+.img2 {
     width: 21vw;
     height: 21vh;
     background-image: url(images/frog.jpg);
@@ -213,21 +213,21 @@ svg{
 }
 
 .animal1 p,
-.animal2 p{
+.animal2 p {
     margin-left: 0.9rem;
     margin-right: 0.2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 0.8rem;
 }
 
-.menu{
+.menu {
     position: absolute;
     z-index: 10;
     top: 0;
     left: 0;
     /* width: 20vw; */
     height: 90vh;
-    background-color:rgb(104, 161, 18);
+    background-color: rgb(104, 161, 18);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -240,13 +240,13 @@ svg{
     transition: width 0.3s ease-in-out;
 }
 
-.menu.slideOut{
+.menu.slideOut {
     width: 20vw;
 }
 
 .pfp {
-    width: 7rem; 
-    height: 7rem; 
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -260,19 +260,81 @@ svg{
     display: block;
 }
 
-.accountInfo{
+.accountInfo {
     margin-right: auto;
     margin-left: 2rem;
 }
 
 .accountInfo h2,
-.accountInfo p{
+.accountInfo p {
     margin-bottom: 2rem;
 }
 
-.cancel{
+.cancel {
     cursor: pointer;
     padding: 1.3rem;
     font-size: 1.5rem;
     margin-left: auto;
 }
+
+/* Image Slider Section */
+
+.imageSlider {
+    width: 50vw;
+    height: 50vh;
+    background-image: url(images/beach.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 5rem;
+    position: relative;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.leftArrow, .rightArrow {
+    cursor: pointer;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    padding: 10px;
+}
+
+.leftArrow {
+    transform: rotate(135deg);
+    margin-left: 1.2rem;
+}
+
+.rightArrow {
+    transform: rotate(-45deg);
+    margin-right: 1.2rem;
+}
+
+.circleContainer {
+    position: absolute;
+    display: flex;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    margin-bottom: 5rem;
+    border-radius: 50%;
+    margin-left: 1.3rem;
+}
+
+.active{
+    background-color: white;
+}
+
+

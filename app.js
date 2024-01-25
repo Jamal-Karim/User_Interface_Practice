@@ -67,4 +67,4 @@ mobileMenuIcon.addEventListener('click', () => {
 
 cancelBtn.addEventListener('click', () => {
     menuTab.classList.remove('slideOut');
-})
+});
