@@ -84,29 +84,68 @@ const imageSlider = document.querySelector('.imageSlider');
 const circles = document.querySelectorAll('.circle');
 
 let count = 0;
+let previouslyClicked = circles[0];
+let imageTimeout;
+
+function updateImage() {
+    if (previouslyClicked) {
+        previouslyClicked.classList.remove('active');
+    }
+
+    circles[count].classList.add('active');
+    imageSlider.style.backgroundImage = images[count];
+
+    previouslyClicked = circles[count];
+
+    count = (count + 1) % circles.length;
+
+    setTimeout(updateImage, 5000);
+}
+
+setTimeout(updateImage, 5000);
+
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', event => {
+        if (previouslyClicked) {
+            previouslyClicked.classList.remove('active');
+        }
+        event.target.classList.add('active');
+        previouslyClicked = event.target;
+
+        count = index;
+        imageSlider.style.backgroundImage = images[count];
+
+        clearTimeout(imageTimeout);
+
+        setTimeout(updateImage, 5000);
+    })
+})
+
 
 leftArrow.addEventListener('click', () => {
-    circles[count].classList.remove('active');
+    if (previouslyClicked) {
+        previouslyClicked.classList.remove('active');
+    }
 
     count--;
     if(count < 0) count = 3;
 
     circles[count].classList.add('active');
     imageSlider.style.backgroundImage = images[count];
+
+    previouslyClicked = circles[count];
 });
 
 rightArrow.addEventListener('click', () => {
-    circles[count].classList.remove('active');
+    if (previouslyClicked) {
+        previouslyClicked.classList.remove('active');
+    }
 
     count++;
     if(count > 3) count = 0;
 
     circles[count].classList.add('active');
     imageSlider.style.backgroundImage = images[count];
-});
 
-circles.forEach(circle => {
-    circle.addEventListener('click', event => {
-        console.log(event.target);
-    })
-})
+    previouslyClicked = circles[count];
+});
