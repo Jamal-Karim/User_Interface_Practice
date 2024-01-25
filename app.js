@@ -68,3 +68,45 @@ mobileMenuIcon.addEventListener('click', () => {
 cancelBtn.addEventListener('click', () => {
     menuTab.classList.remove('slideOut');
 });
+
+//Image Slider
+
+const images = [
+    'url(images/beach.jpg)',
+    'url(images/mountain.jpg)',
+    'url(images/reef.jpg)',
+    'url(images/desert.jpg)'
+]
+
+const leftArrow = document.querySelector('.leftArrow');
+const rightArrow = document.querySelector('.rightArrow');
+const imageSlider = document.querySelector('.imageSlider');
+const circles = document.querySelectorAll('.circle');
+
+let count = 0;
+
+leftArrow.addEventListener('click', () => {
+    circles[count].classList.remove('active');
+
+    count--;
+    if(count < 0) count = 3;
+
+    circles[count].classList.add('active');
+    imageSlider.style.backgroundImage = images[count];
+});
+
+rightArrow.addEventListener('click', () => {
+    circles[count].classList.remove('active');
+
+    count++;
+    if(count > 3) count = 0;
+
+    circles[count].classList.add('active');
+    imageSlider.style.backgroundImage = images[count];
+});
+
+circles.forEach(circle => {
+    circle.addEventListener('click', event => {
+        console.log(event.target);
+    })
+})
